@@ -1,0 +1,19 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: uk\n"
+
+msgid "Station not connected"
+msgstr "Станцію не підключено"
+
+msgid "Station data is unavailable."
+msgstr "Дані станції недоступні."
+
+msgid "Show"
+msgstr "Показати"
+
+msgid "Hide"
+msgstr "Сховати"
+
+msgid "Exit"
+msgstr "Вийти"

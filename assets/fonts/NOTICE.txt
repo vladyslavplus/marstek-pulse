@@ -1,0 +1,4 @@
+IBM Plex Sans Regular and Medium
+Copyright (c) 2017 IBM Corp. with Reserved Font Name "Plex".
+Licensed under the SIL Open Font License, Version 1.1; see OFL.txt.
+Source: https://github.com/IBM/plex/tree/71f558992315a12ca1f06a2215d57962a1992162/packages/plex-sans/fonts/complete/ttf

@@ -1,0 +1,33 @@
+# Local planning, device evidence, and agent tooling
+/docs/
+/Docs/
+/AGENTS.md
+/.agents/
+/.codex/
+/.claude/
+/.cursor/
+/.impeccable/
+/PRODUCT.md
+/DESIGN.md
+/design-system/
+
+# Rust outputs; Cargo.lock should be tracked for this application
+/target/
+
+# Local configuration, logs, and captures
+.env
+.env.*
+!.env.example
+*.local.json
+*.local.toml
+*.log
+*.pcap
+*.pcapng
+/private/
+
+# Editor and OS files
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini

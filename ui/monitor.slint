@@ -1,0 +1,42 @@
+import "../assets/fonts/IBMPlexSans-Regular.ttf";
+import "../assets/fonts/IBMPlexSans-Medium.ttf";
+import { Button, Palette } from "std-widgets.slint";
+
+export component Monitor inherits Window {
+    title: "Marstek Pulse";
+    width: 380px; height: 250px;
+
+    background: #F6F7F9;
+    default-font-family: "IBM Plex Sans";
+    init => { Palette.color-scheme = ColorScheme.light; }
+    VerticalLayout {
+        padding: 16px; spacing: 12px;
+        Text { text: "Marstek Pulse"; color: #17212B; font-size: 16px; font-weight: 500; }
+        Text { text: @tr("Station not connected"); color: #17212B; font-size: 14px; }
+        Text { text: @tr("Station data is unavailable."); color: #526171; font-size: 14px; wrap: word-wrap; }
+        Rectangle { vertical-stretch: 1; }
+        HorizontalLayout {
+            spacing: 8px;
+            Button { text: "Українська"; clicked => { root.ukrainian(); } }
+            Button { text: "English"; clicked => { root.english(); } }
+            Button { text: @tr("Exit"); clicked => { root.exit-app(); } }
+        }
+    }
+    callback ukrainian();
+    callback english();
+    callback exit-app();
+}
+export component Tray inherits SystemTrayIcon {
+    icon: @image-url("../assets/tray.svg");
+    tooltip: "Marstek Pulse";
+    clicked => { root.show-window(); }
+    Menu {
+        MenuItem { title: @tr("Show"); activated => { root.show-window(); } }
+        MenuItem { title: @tr("Hide"); activated => { root.hide-window(); } }
+        MenuItem { title: @tr("Exit"); activated => { root.exit-app(); } }
+    }
+    callback show-window();
+    callback hide-window();
+    callback exit-app();
+}
+
